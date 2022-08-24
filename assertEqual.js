@@ -6,7 +6,7 @@ if(actual === expected){
 console.log( `Assertion Passed: ${actual} === ${expected}` );
 }
 
-if(actual !== expected) {
+else {
 console.log(`Assertion failed:${actual} !== ${expected}` );
 }
 
@@ -18,13 +18,13 @@ console.log(`Assertion failed:${actual} !== ${expected}` );
 
 
 assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1, 1);
+// assertEqual(1, 1);
 
-assertEqual("Bootcamp", "Bootcamp");
-assertEqual(1, 3);
+//assertEqual("Bootcamp", "Bootcamp");
+//assertEqual(1, 3);
 
-console.assert(assertEqual("Lighthouse Labs", "Bootcamp"));
-console.assert(assertEqual(1, 1));
+// console.assert(assertEqual("Lighthouse Labs", "Bootcamp"));
+// console.assert(assertEqual(1, 1));
 
 
 
