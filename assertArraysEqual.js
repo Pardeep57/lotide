@@ -1,35 +1,41 @@
-const eqArrays = (arrayOne, arrayTwo) => {
-  let doesThisPass = true;
-  for (let i = 0; i < arrayOne.length; i++) {
-    if (arrayOne[i] === arrayTwo[i]) {
-      console.log(
-        `✅ Assertion Passed at index ${i}: ${arrayOne[i]} === ${arrayTwo[i]}`
-      );
-    } else if (arrayOne[i] !== arrayTwo[i]) {
-      console.log(
-        `🛑 Assertion Failed at index ${i}: ${arrayOne[i]} !== ${arrayTwo[i]}`
-      );
-      doesThisPass = false;
+/*
+const assertArraysEqual = function(array1, array2){
+    for (let i = 0; i < array1.length; i++){
+        if (array1[i] !== array2[i]) {
+         console.log(`🛑🛑🛑 Assertion Failed: ${actual}  !==  ${expected}`);
+        }
+      }
+    console.log(`✅✅✅ Assertion Passed: ${actual}  === ${expected}`);
+  }
+
+  const assertEqual = function(actual, expected) {
+
+    if(actual === expected){
+    
+    console.log( `Assertion Passed: ${actual} === ${expected}` );
     }
-  }
-  console.log(doesThisPass);
-  return doesThisPass;
-};
-
-const assertArraysEqual = (arrayOne, arrayTwo) => {
-  if (eqArrays(arrayOne, arrayTwo)) {
-    console.log(`✅✅✅ Assertion Passed: ${arrayOne} === ${arrayTwo}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${arrayOne} !== ${arrayTwo}`);
-  }
-  return eqArrays;
-};
-
-
+    
+    else {
+    console.log(`Assertion failed:${actual} !== ${expected}` );
+    }
+    
+    };
+    
 // TEST CODE
 // eqArrays([1, 2, 3], [1, 2, 3]); // => true
 // eqArrays([1, 2, 3], [3, 2, 1]); // => false
 // eqArrays(["1", "2", "3"], ["1", "2", 3]);
 assertArraysEqual(["1", "2", "3"], ["1", "2", "3"]); // => true?
 
+*/
 
+const eqArrays = require('./eqArrays');
+const assertArraysEqual = function(actual, expected) {
+  if (eqArrays(actual, expected)) {
+    console.log(`✅✅✅ Assertion Passed: "${actual}" === "${expected}"`);
+  } else {
+    console.log(`🛑🛑🛑 Assertion Failed: "${actual}" !== "${expected}"`);
+      }
+    };
+
+module.exports = assertArraysEqual;
